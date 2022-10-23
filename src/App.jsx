@@ -43,14 +43,12 @@ export default function App() {
   
   return (
     <>
-      <main>
+      <main className="max-w-[1137px] mx-auto mt-16 px-8">
         {/* profile section */}
-        <div className="">
-          <div className="">
-            <img id="profile__img" src={tito} className="w-[88px] h-[88px] rounded-full object-cover" alt="profile picture" />
-          </div>
+        <div className="mb-14 w-fit mx-auto">
+          <img id="profile__img" src={tito} className="w-[88px] h-[88px] rounded-full object-cover mb-6" alt="profile picture" />
   
-          <h1 id="twitter" className="">guytito_</h1>
+          <h1 id="twitter" className="font-bold text-[20px]">guytito_</h1>
           <span id='slack' className="hidden">{slack}</span>
         </div>
 
