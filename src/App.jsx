@@ -1,3 +1,10 @@
+import tito from "./assets/tito.jpg";
+import zuri from "./assets/zuri.png";
+import I4G from "./assets/I4G.png";
+import slack from "./assets/slack.png";
+import github from "./assets/github.png";
+
+
 export default function App() {
   const slack = 'guy_tito';
 
@@ -39,8 +46,8 @@ export default function App() {
       <main>
         {/* profile section */}
         <div className="">
-          <div>
-            <img id="profile__img" src="" alt="profile picture" />
+          <div className="">
+            <img id="profile__img" src={tito} className="w-[88px] h-[88px] rounded-full object-cover" alt="profile picture" />
           </div>
   
           <h1 id="twitter" className="">guytito_</h1>
