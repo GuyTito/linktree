@@ -1,7 +1,7 @@
 import tito from "./assets/tito.jpg";
 import zuri from "./assets/zuri.png";
 import I4G from "./assets/I4G.png";
-import slack from "./assets/slack.png";
+import slack_icon from "./assets/slack.png";
 import github from "./assets/github.png";
 
 
@@ -59,9 +59,14 @@ export default function App() {
               <a href={href} id={id} key={id} target="_blank" className="py-6 bg-gray-200 font-medium text-gray-900 rounded-lg">{text}</a>
             ))}
           </div>
-          <div>
-            <a href="slack.com">slack icon</a>
-            <a href="https://github.com/GuyTito">github icon</a>
+
+          <div className="flex gap-6 justify-center mt-6 py-6">
+            <a href="https://google.com">
+              <img src={slack_icon} alt="slack" />
+            </a>
+            <a href="https://github.com/GuyTito">
+              <img src={github} alt="github" />
+            </a>
           </div>
         </div>
       </main>
