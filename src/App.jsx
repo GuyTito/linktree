@@ -3,6 +3,7 @@ import zuri from "./assets/zuri.png";
 import I4G from "./assets/I4G.png";
 import slack_icon from "./assets/slack.png";
 import github from "./assets/github.png";
+import share from "./assets/share.png";
 
 
 export default function App() {
@@ -43,7 +44,13 @@ export default function App() {
   
   return (
     <>
-      <main className="max-w-[1137px] mx-auto mt-16 px-8">
+      <main className="max-w-[1137px] mx-auto mt-16 px-8 relative">
+        {/* share button */}
+        <button title="Share link" className="hover:bg-gray-100 p-3 rounded-full border border-dashed outline-none focus:shadow-[0px_0px_0px_4px_#d1d5db] absolute right-0 sm:right-60 -top-5">
+          <img src={share} className="hidden sm:block" alt="share icon" />
+          <span className="text-xl sm:hidden">...</span>
+        </button>
+
         {/* profile section */}
         <div className="mb-14 w-fit mx-auto text-center">
           <img id="profile__img" src={tito} className="w-[88px] h-[88px] rounded-full object-cover mb-6" alt="profile picture" />
@@ -56,7 +63,7 @@ export default function App() {
         <div className="text-center">
           <div className="flex flex-col gap-6">
             {links.map(({text, href, id}) => (
-              <a href={href} id={id} key={id} target="_blank" className="py-6 bg-gray-200 font-medium text-gray-900 rounded-lg">{text}</a>
+              <a href={href} id={id} key={id} target="_blank" className="py-6 bg-gray-200 font-semibold text-gray-900 rounded-lg">{text}</a>
             ))}
           </div>
 
