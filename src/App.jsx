@@ -45,19 +45,20 @@ export default function App() {
     <>
       <main className="max-w-[1137px] mx-auto mt-16 px-8">
         {/* profile section */}
-        <div className="mb-14 w-fit mx-auto">
+        <div className="mb-14 w-fit mx-auto text-center">
           <img id="profile__img" src={tito} className="w-[88px] h-[88px] rounded-full object-cover mb-6" alt="profile picture" />
   
-          <h1 id="twitter" className="font-bold text-[20px]">guytito_</h1>
+          <h1 id="twitter" className="font-bold text-xl">guytito_</h1>
           <span id='slack' className="hidden">{slack}</span>
         </div>
 
         {/* links section */}
-        <div className="">
-          {links.map(({text, href, id}) => (
-            <a href={href} id={id} key={id} target="_blank" className="">{text}</a>
-          ))}
-          
+        <div className="text-center">
+          <div className="flex flex-col gap-6">
+            {links.map(({text, href, id}) => (
+              <a href={href} id={id} key={id} target="_blank" className="py-6 bg-gray-200 font-medium text-gray-900 rounded-lg">{text}</a>
+            ))}
+          </div>
           <div>
             <a href="slack.com">slack icon</a>
             <a href="https://github.com/GuyTito">github icon</a>
