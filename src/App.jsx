@@ -63,7 +63,7 @@ export default function App() {
         <div className="text-center">
           <div className="flex flex-col gap-6">
             {links.map(({text, href, id}) => (
-              <a href={href} id={id} key={id} target="_blank" className="py-6 bg-gray-200 font-semibold text-gray-900 rounded-lg">{text}</a>
+              <a href={href} id={id} key={id} target="_blank" className="py-6 bg-gray-200 font-semibold text-gray-900 rounded-lg hover:bg-gray-300 outline-gray-400">{text}</a>
             ))}
           </div>
 
