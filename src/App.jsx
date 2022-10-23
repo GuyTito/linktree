@@ -61,7 +61,9 @@ export default function App() {
       </main>
 
       <footer>
-
+        <img src="" alt="" />
+        <span className="">HNG Internship 9 Frontend Task</span>
+        <img src="" alt="" />
       </footer>
     </>
   )
