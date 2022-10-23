@@ -71,10 +71,12 @@ export default function App() {
         </div>
       </main>
 
-      <footer>
-        <img src="" alt="" />
-        <span className="">HNG Internship 9 Frontend Task</span>
-        <img src="" alt="" />
+      <footer className="mt-16 py-12">
+        <div className="border-t flex justify-between items-center pt-8 max-w-[1216px] mx-auto">
+          <img src={zuri} alt="zuri internship logo" />
+          <span className="text-md text-gray-500">HNG Internship 9 Frontend Task</span>
+          <img src={I4G} alt="I4G logo" />
+        </div>
       </footer>
     </>
   )
