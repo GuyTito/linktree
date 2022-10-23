@@ -5,7 +5,7 @@ export default function App() {
     {
       id: 'twitter__link',
       text: 'Twitter Link',
-      href: '',
+      href: 'https://twitter.com/guytito_',
     },
     {
       id: 'btn__zuri',
@@ -43,7 +43,7 @@ export default function App() {
             <img id="profile__img" src="" alt="profile picture" />
           </div>
   
-          <h1 id="twitter" className="">Kofi Quist</h1>
+          <h1 id="twitter" className="">guytito_</h1>
           <span id='slack' className="hidden">{slack}</span>
         </div>
 
@@ -52,8 +52,17 @@ export default function App() {
           {links.map(({text, href, id}) => (
             <a href={href} id={id} key={id} target="_blank" className="">{text}</a>
           ))}
+          
+          <div>
+            <a href="slack.com">slack icon</a>
+            <a href="https://github.com/GuyTito">github icon</a>
+          </div>
         </div>
       </main>
+
+      <footer>
+
+      </footer>
     </>
   )
 }
