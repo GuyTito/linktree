@@ -25,6 +25,7 @@ export default function App() {
       id: 'books',
       text: 'Zuri Books',
       href: 'http://books.zuri.team/',
+      title: 'Find books about design and coding',
     },
     {
       id: 'book__pyton',
@@ -56,15 +57,15 @@ export default function App() {
         <div className="mb-14 w-fit mx-auto text-center">
           <img id="profile__img" src={tito} className="w-[88px] h-[88px] rounded-full object-cover mb-6" alt="profile picture" />
   
-          <h1 id="twitter" className="font-bold text-xl">guytito_</h1>
+          <h1 id="twitter" className="font-bold text-xl">@guytito_</h1>
           <span id='slack' className="hidden">{slack}</span>
         </div>
 
         {/* links section */}
         <div className="text-center">
           <div className="flex flex-col gap-6">
-            {links.map(({text, href, id}) => (
-              <a href={href} id={id} key={id} target="_blank" className="py-6 bg-gray-200 font-semibold text-gray-900 rounded-lg hover:bg-gray-300 outline-gray-400">{text}</a>
+            {links.map(({text, href, id, title}) => (
+              <a href={href} id={id} title={title} key={id} target="_blank" className="py-6 bg-gray-200 font-semibold text-gray-900 rounded-lg hover:bg-gray-300 outline-gray-400">{text}</a>
             ))}
           </div>
 
