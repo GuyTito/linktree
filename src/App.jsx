@@ -43,14 +43,28 @@ export default function App() {
       href: 'https://books.zuri.team/design-rules',
     },
   ]
+
+  async function shareLink() {
+    try {
+      const shareData = {
+        title: 'Share Link',
+        text: 'Share Linktree link',
+        url: window.location.href
+      }
+      await navigator.share(shareData);
+    } catch (err) {
+      console.log(err);
+      alert('Error: Sorry, cannot share ☹');
+    }
+  }
   
   return (
     <>
       <main className="max-w-[1137px] mx-auto mt-16 px-4 sm:px-8 relative">
         {/* share button */}
         <div title="Share link" className="hover:bg-gray-100 rounded-full border border-dashed outline-none focus:shadow-[0px_0px_0px_4px_#d1d5db] absolute right-4 sm:right-[21%] -top-5">
-          <img onClick={()=>alert('share')} src={share} className="hidden sm:block sm:p-3" alt="share icon" />
-          <img onClick={() => alert('more')} src={more} className="px-[14px] py-5 sm:hidden" alt="share icon" />
+          <img onClick={() => shareLink()} src={share} className="hidden sm:block sm:p-3" alt="share icon" />
+          <img onClick={() => shareLink()} src={more} className="px-[14px] py-5 sm:hidden" alt="share icon" />
         </div>
 
         {/* profile section */}
