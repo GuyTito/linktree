@@ -5,10 +5,13 @@ import slack_icon from "./assets/slack.png";
 import github from "./assets/github.png";
 import share from "./assets/share.png";
 import more from "./assets/more.png";
+import { useState } from "react";
 
 
 export default function App() {
+  const [modal, setModal] = useState(false)
   const slack = 'guy_tito';
+  const twitter_username = '@guytito_'
 
   const links = [
     {
@@ -47,8 +50,8 @@ export default function App() {
   async function shareLink() {
     try {
       const shareData = {
-        title: 'Share Link',
-        text: 'Share Linktree link',
+        title: 'Share This Link',
+        text: 'Share this link',
         url: window.location.href
       }
       await navigator.share(shareData);
@@ -62,16 +65,16 @@ export default function App() {
     <>
       <main className="max-w-[1137px] mx-auto mt-16 px-4 sm:px-8 relative">
         {/* share button */}
-        <div title="Share link" className="hover:bg-gray-100 rounded-full border border-dashed outline-none focus:shadow-[0px_0px_0px_4px_#d1d5db] absolute right-4 sm:right-[21%] -top-5">
-          <img onClick={() => shareLink()} src={share} className="hidden sm:block sm:p-3" alt="share icon" />
-          <img onClick={() => shareLink()} src={more} className="px-[14px] py-5 sm:hidden" alt="share icon" />
+        <div className="hover:bg-gray-100 rounded-full border border-dashed outline-none focus:shadow-[0px_0px_0px_4px_#d1d5db] absolute right-4 sm:right-[21%] -top-5">
+          <img onClick={() => shareLink()} src={share} className="hidden sm:block sm:p-3" alt="share icon" title="Share link" />
+          <img onClick={() => setModal(true)} src={more} className="px-[14px] py-5 sm:hidden" alt="more" title="More" />
         </div>
 
         {/* profile section */}
         <div className="mb-14 w-fit mx-auto text-center">
           <img id="profile__img" src={tito} className="w-[88px] h-[88px] rounded-full object-cover mb-6" alt="profile picture" />
   
-          <h1 id="twitter" className="font-bold text-xl">@guytito_</h1>
+          <h1 id="twitter" className="font-bold text-xl">{twitter_username}</h1>
           <span id='slack' className="hidden">{slack}</span>
         </div>
 
@@ -109,6 +112,22 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* share modal */}
+      {modal && 
+        <div onClick={() => setModal(false)} className="fixed inset-0 bg-black/40">
+          <div onClick={e => e.stopPropagation()} className="font-bold fixed bottom-0 p-8 rounded-t-3xl bg-white w-full space-y-8">
+            <div className="flex">
+              <h2 className="text-center flex-grow">{twitter_username} </h2>
+              <span onClick={() => setModal(false)} className="ml-auto font-light">&#x2715;</span>
+            </div>
+            <div onClick={() => shareLink()} className="flex justify-between items-center">
+              <span>Share this link </span>
+              <span className="font-light text-xl">&gt;</span>
+              </div>
+          </div>
+        </div>
+      }
     </>
   )
 }
