@@ -48,9 +48,9 @@ export default function App() {
     <>
       <main className="max-w-[1137px] mx-auto mt-16 px-4 sm:px-8 relative">
         {/* share button */}
-        <div title="Share link" className="hover:bg-gray-100  sm:p-3 rounded-full border border-dashed outline-none focus:shadow-[0px_0px_0px_4px_#d1d5db] absolute right-4 sm:right-[21%] -top-5">
-          <img src={share} className="hidden sm:block" alt="share icon" />
-          <img src={more} className="px-[14px] py-5 sm:hidden" alt="share icon" />
+        <div title="Share link" className="hover:bg-gray-100 rounded-full border border-dashed outline-none focus:shadow-[0px_0px_0px_4px_#d1d5db] absolute right-4 sm:right-[21%] -top-5">
+          <img onClick={()=>alert('share')} src={share} className="hidden sm:block sm:p-3" alt="share icon" />
+          <img onClick={() => alert('more')} src={more} className="px-[14px] py-5 sm:hidden" alt="share icon" />
         </div>
 
         {/* profile section */}
@@ -80,18 +80,18 @@ export default function App() {
         </div>
       </main>
 
-      <footer className="mt-16 py-12  sm:block">
-        <div className="border-t hidden sm:flex justify-between items-center  pt-8 max-w-[1216px] mx-auto px-4">
+      <footer className="mt-16">
+        <div className=" py-12 border-t hidden sm:flex justify-between items-center  pt-8 max-w-[1216px] mx-auto px-4">
           <img src={zuri} alt="zuri internship logo" />
           <span className="text-md text-gray-500">HNG Internship 9 Frontend Task</span>
           <img src={I4G} alt="I4G logo" />
         </div>
 
-        <div className="flex flex-col text-center gap-5 sm:hidden">
+        <div className="py-4 flex flex-col text-center gap-5 sm:hidden">
           <span className="text-md text-gray-500">HNG Internship 9 Frontend Task</span>
           <div className="flex justify-between px-4">
-            <img src={zuri} alt="zuri internship logo" />
-            <img src={I4G} alt="I4G logo" />
+            <img src={zuri} className="w-24 object-contain" alt="zuri internship logo" />
+            <img src={I4G} className="w-24 object-contain" alt="I4G logo" />
           </div>
         </div>
       </footer>
