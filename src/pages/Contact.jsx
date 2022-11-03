@@ -7,7 +7,7 @@ export default function Contact() {
       <main className="max-w-[720px] mx-auto mt-16 sm:mt-[156px] mb-24 sm:mb-[188px] px-4 text-gray-600">
         <h1 className="font-semibold text-4xl mb-4 sm:mb-5 text-gray-900">Contact Me</h1>
         <p className="text-[16px] sm:text-xl mb-12">Hi there, contact me to ask me about anything you have in mind.</p>
-        <form>
+        <form onSubmit={(e)=>e.preventDefault()}>
           <div className="space-y-6 mb-6 sm:flex sm:space-y-0 justify-between gap-6">
             <div className="field-group sm:w-1/2 w-full">
               <label htmlFor="first_name" className="label">First name</label>
