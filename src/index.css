@@ -18,7 +18,7 @@
     @apply py-[10px] px-[14px] border rounded-lg border-gray-300 placeholder-gray-500 text-[16px]
   }
   .input-width{
-    @apply sm:w-[348px]
+    @apply sm:w-full
   }
   .field-group{
     @apply flex flex-col gap-[6px]
