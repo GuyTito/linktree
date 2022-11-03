@@ -1,6 +1,4 @@
 import tito from "../assets/tito.jpg";
-import zuri from "../assets/zuri.png";
-import I4G from "../assets/I4G.png";
 import slack_icon from "../assets/slack.png";
 import github from "../assets/github.png";
 import share from "../assets/share.png";
@@ -64,7 +62,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="max-w-[1137px] mx-auto mt-16 px-4 sm:px-8 relative">
+      <main className="max-w-[1137px] mx-auto mt-16 mb-16 px-4 sm:px-8 relative">
         {/* share button */}
         <div className="hover:bg-gray-100 rounded-full border border-dashed outline-none focus:shadow-[0px_0px_0px_4px_#d1d5db] absolute right-4 sm:right-[21%] -top-5">
           <img onClick={() => shareLink()} src={share} className="hidden sm:block sm:p-3" alt="share icon" title="Share link" />
@@ -98,22 +96,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer className="mt-16">
-        <div className=" py-12 border-t hidden sm:flex justify-between items-center  pt-8 max-w-[1216px] mx-auto px-4">
-          <img src={zuri} alt="zuri internship logo" />
-          <span className="text-md text-gray-500">HNG Internship 9 Frontend Task</span>
-          <img src={I4G} alt="I4G logo" />
-        </div>
-
-        <div className="py-4 flex flex-col text-center gap-5 sm:hidden">
-          <span className="text-md text-gray-500">HNG Internship 9 Frontend Task</span>
-          <div className="flex justify-between px-4">
-            <img src={zuri} className="w-24 object-contain" alt="zuri internship logo" />
-            <img src={I4G} className="w-24 object-contain" alt="I4G logo" />
-          </div>
-        </div>
-      </footer>
 
       {/* share modal */}
       {modal &&
