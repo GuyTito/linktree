@@ -6,6 +6,7 @@ import github from "../assets/github.png";
 import share from "../assets/share.png";
 import more from "../assets/more.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -44,11 +45,6 @@ export default function Home() {
       id: 'book__design',
       text: 'Design Books',
       href: 'https://books.zuri.team/design-rules',
-    },
-    {
-      id: 'contact',
-      text: 'Contact Me',
-      href: '/contact',
     },
   ]
 
@@ -89,6 +85,7 @@ export default function Home() {
             {links.map(({ text, href, id, title }) => (
               <a href={href} id={id} title={title} key={id} target="_blank" className="py-6 bg-gray-200 font-semibold text-gray-900 rounded-lg hover:bg-gray-300 outline-gray-400">{text}</a>
             ))}
+            <Link to='contact' id='contact' className="py-6 bg-gray-200 font-semibold text-gray-900 rounded-lg hover:bg-gray-300 outline-gray-400">Contact Me</Link>
           </div>
 
           <div className="flex gap-6 justify-center mt-6 py-6">
