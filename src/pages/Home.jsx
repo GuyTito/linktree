@@ -45,6 +45,11 @@ export default function Home() {
       text: 'Design Books',
       href: 'https://books.zuri.team/design-rules',
     },
+    {
+      id: 'contact',
+      text: 'Contact Me',
+      href: '/contact',
+    },
   ]
 
   async function shareLink() {
