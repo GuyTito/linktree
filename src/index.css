@@ -9,3 +9,18 @@
     @apply font-serif
   }
 }
+
+@layer components{
+  .label{
+    @apply font-medium text-sm text-gray-700
+  }
+  .input{
+    @apply py-[10px] px-[14px] border rounded-lg border-gray-300 placeholder-gray-500 text-[16px]
+  }
+  .input-width{
+    @apply sm:w-[348px]
+  }
+  .field-group{
+    @apply flex flex-col gap-[6px]
+  }
+}
