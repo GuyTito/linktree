@@ -1,10 +1,10 @@
-import tito from "./assets/tito.jpg";
-import zuri from "./assets/zuri.png";
-import I4G from "./assets/I4G.png";
-import slack_icon from "./assets/slack.png";
-import github from "./assets/github.png";
-import share from "./assets/share.png";
-import more from "./assets/more.png";
+import tito from "../assets/tito.jpg";
+import zuri from "../assets/zuri.png";
+import I4G from "../assets/I4G.png";
+import slack_icon from "../assets/slack.png";
+import github from "../assets/github.png";
+import share from "../assets/share.png";
+import more from "../assets/more.png";
 import { useState } from "react";
 
 
