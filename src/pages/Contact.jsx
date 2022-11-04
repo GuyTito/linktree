@@ -11,16 +11,16 @@ export default function Contact() {
           <div className="space-y-6 mb-6 sm:flex sm:space-y-0 justify-between gap-6">
             <div className="field-group sm:w-1/2 w-full">
               <label htmlFor="first_name" className="label">First name</label>
-              <input type="text" id="first_name" placeholder="Enter your first name" className="input input-width" />
+              <input type="text" autoComplete="off" id="first_name" placeholder="Enter your first name" className="input input-width" />
             </div>
             <div className="field-group sm:w-1/2 w-full">
               <label htmlFor="last_name" className="label">Last name</label>
-              <input type="text" id="last_name" placeholder="Enter your last name" className="input input-width" />
+              <input type="text" autoComplete="off" id="last_name" placeholder="Enter your last name" className="input input-width" />
             </div>
           </div>
           <div className="field-group mb-6">
             <label htmlFor="email" className="label">Email</label>
-            <input type="email" id="email" placeholder="yourname@email.com" className="input" />
+            <input type="email" autoComplete="off" id="email" placeholder="yourname@email.com" className="input" />
           </div>
           <div className="field-group mb-6">
             <label htmlFor="message" className="label">Message</label>
