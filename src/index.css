@@ -15,7 +15,7 @@
     @apply font-medium text-sm text-gray-700
   }
   .input{
-    @apply py-[10px] px-[14px] border rounded-lg border-gray-300 placeholder-gray-500 text-[16px]
+    @apply py-[10px] px-[14px] border rounded-lg border-gray-300 placeholder-gray-500 text-[16px] focus:ring focus:ring-blue-200 focus:border-primary
   }
   .input-width{
     @apply sm:w-full
