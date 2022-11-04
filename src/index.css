@@ -20,6 +20,9 @@
   .focus-ring{
     @apply focus:ring focus:ring-blue-200 focus:border-primary
   }
+  .error-ring{
+    @apply focus:ring focus:ring-red-200 focus:border-red-500 border-red-500
+  }
   .input-width{
     @apply sm:w-full
   }
