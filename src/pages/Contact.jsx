@@ -27,7 +27,7 @@ export default function Contact() {
             <textarea id="message" placeholder="Send me a message and I'll reply you as soon as possible..." className="input h-[132px]"></textarea>
           </div>
           <div className="flex items-center mb-8">
-            <input type="checkbox" id="checkbox" className="w-5 h-5 border-gray-300 rounded-[6px]" />
+            <input type="checkbox" id="checkbox" className="w-5 h-5 border-gray-300 rounded-[6px] checked:border-blue-600 checked:hover:border-blue-600 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:border-primary text-gray-50 checked:bg-check" />
             <label htmlFor="checkbox" className="ml-3 text-gray-600 text-[16px]">You agree to providing your data to Kofi Quist who may contact you.</label>
           </div>
           <div>
