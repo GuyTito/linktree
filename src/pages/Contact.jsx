@@ -68,7 +68,7 @@ export default function Contact() {
             <label htmlFor="checkbox" className="ml-3 text-gray-600 text-[16px]">You agree to providing your data to Kofi Quist who may contact you.</label>
           </div>
           <div>
-            <input type="submit" id="btn__submit" required value="Send message" className="bg-blue-600 rounded-lg py-3 w-full text-white focus-ring cursor-pointer" />
+            <input type="submit" id="btn__submit" required value="Send message" className="bg-blue-600 rounded-lg py-3 w-full text-white focus-ring cursor-pointer hover:bg-blue-700" />
           </div>
         </form>
       </main>
