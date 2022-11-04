@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         serif: ["Inter", ...defaultTheme.fontFamily.serif],
       },
+      colors: {
+        "primary": "rgba(132, 202, 255, 1)",
+      }
     },
   },
   plugins: [
