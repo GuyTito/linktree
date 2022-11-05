@@ -64,7 +64,7 @@ export default function Contact() {
             {(isError && !message) && <span className="text-sm font-medium text-red-500">Please enter a message</span>}
           </div>
           <div className="flex items-center mb-8">
-            <input type="checkbox" id="checkbox" className="w-5 h-5 border-gray-300 rounded-[6px] checked:border-blue-600 checked:hover:border-blue-600 focus:ring-offset-0 focus-ring text-gray-50 checked:bg-check" />
+            <input required type="checkbox" id="checkbox" className="w-5 h-5 border-gray-300 rounded-[6px] checked:border-blue-600 checked:hover:border-blue-600 focus:ring-offset-0 focus-ring text-gray-50 checked:bg-check" />
             <label htmlFor="checkbox" className="ml-3 text-gray-600 text-[16px]">You agree to providing your data to Kofi Quist who may contact you.</label>
           </div>
           <div>
